@@ -49,13 +49,19 @@ control() {
     fi
 
     if [[ $2 = "Bill" ]]; then
-        echo "Bill is first argument"
+        echo "Bill is second argument"
+    else 
+        echo "Who cares what the second argument is?"
     fi
 }
 
 control "Tim" "Allen"
 control "Joe" "Bill"
 control "Alex" "Allen"
+
+# how to take in user input and store it into the variable hehe
+read -p "Name: " hehe
+echo $hehe
 
 # best practice to end with exit code 0 if success
 exit 0
